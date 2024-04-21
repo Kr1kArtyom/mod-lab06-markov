@@ -26,7 +26,7 @@ TEST(test3, single) {
     std::map<Prefix, std::vector<std::string>> statetab1;
     statetab1[{ "prefix" }] = { "suffix" };
     gen.setStatetab(statetab1);
-    std::string text1 = generator.generateText(2);
+    std::string text1 = gen.generateText(2);
     EXPECT_EQ(text1, "prefix suffix ");
 }
 
@@ -35,7 +35,7 @@ TEST(test4, multiple) {
     std::map<Prefix, std::vector<std::string>> statetab2;
     statetab2[{ "prefix" }] = { "suffix1", "suffix2" };
     gen.setStatetab(statetab2);
-    std::string text2 = generator.generateText(2);
+    std::string text2 = gen.generateText(2);
     EXPECT_TRUE(text2 == "prefix suffix1 " || text2 == "prefix suffix2 ");
 }
 
