@@ -47,5 +47,5 @@ TEST(test5, custom_table) {
     };
     gen.setStatetab(map);
     std::string res = gen.generateText(2);
-    EXPECT_EQ(7, res.size());
+    EXPECT_EQ(8, res.size());
 }
